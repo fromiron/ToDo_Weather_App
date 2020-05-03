@@ -1,0 +1,21 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+#clockContainer {
+  width: 100%;
+  font-weight: 500;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+}
+#clock__left {
+  font-size: 150px;
+}
+#clock__right {
+  font-size: 40px;
+}
+
+#clock__bottom {
+}
