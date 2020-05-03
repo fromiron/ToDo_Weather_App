@@ -5,7 +5,28 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.9);
 }
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -3;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+}
+#bgCover{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: rgba(70, 67, 62, 0.459);
+}
+
 #nameContainer {
   margin-top: 50px;
   position: relative;
@@ -59,6 +80,7 @@ body {
 }
 #clock__right > #clock__right__AP {
   font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.6);
 }
 #clock__bottom {
   font-size: 1.5em;
@@ -66,7 +88,7 @@ body {
 #clock__dots {
   display: inline-flex;
   align-items: center;
-  transform: rotate( 90deg )
+  transform: rotate( 90deg );
 }
 #clock__dots .clock__dots__dots {
   background-color: black;
@@ -74,4 +96,6 @@ body {
   width: 0.08em;
   border-radius: 50%;
   margin: 0 7px 0 7px;
+  background-color: white;
 }
+
