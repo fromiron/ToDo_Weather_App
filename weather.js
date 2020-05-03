@@ -92,7 +92,6 @@ function init() {
           return res.json();
         })
         .then(function (json) {
-          console.log(json);
           const city = json.name;
           const humidity = json.main.humidity;
           const temp = json.main.temp;

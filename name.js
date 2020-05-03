@@ -18,6 +18,8 @@ const logoutBtn = () => {
 };
 const clearLocal = () => {
   localStorage.removeItem('name');
+  localStorage.removeItem('PENDING');
+  localStorage.removeItem('CHECK');
   location.reload(true);
 };
 

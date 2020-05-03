@@ -33,6 +33,52 @@ body {
   align-items: center;
   flex-direction: column;
 }
+#greetings__msg {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+#name__input {
+  outline: 0;
+  font-weight: 700;
+  background-color: #2a2a2a;
+  border: 0;
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#logoutBtn {
+  outline: 0;
+  background-color: #2a2a2a;
+  width: 100%;
+  border: 0;
+  margin-top: 10px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+#name__input:hover,
+#name__input:active,
+#name__input:focus,
+#todo_input_wrap:hover,
+#todo_input_wrap:active,
+#todo_input_wrap:focus,
+#logoutBtn:hover,
+#logoutBtn:active,
+#logoutBtn:focus {
+  background-color: #89c16994;
+}
+#todo_input_wrap {
+  padding: 10px;
+  background-color: #4caf4f94;
+  color: #ffffff;
+}
+
 #todoContainer {
   display: flex;
   align-items: center;
@@ -41,6 +87,8 @@ body {
 }
 #todo_input {
   width: 300px;
+  background-color: white;
+  outline: 0;
 }
 .todo_finished {
   color: rgba(255, 255, 255, 0.6);
@@ -50,12 +98,23 @@ body {
 #todo_pending__wrap {
   margin-top: 1em;
 }
-#todo_input_form {
+#todo_input_wrap {
   margin-top: 0.5em;
+  background-color: #2a2a2a;
 }
+
 #todo_pending {
   margin-top: 0.5em;
   padding-left: 2em;
+  padding-right: 1em;
+  width: 300px;
+  display: inline-block;
+  position: relative;
+}
+#todo_pending span:nth-child(2),
+#todo_pending span:nth-child(3) {
+  float: right;
+  margin-left: 0.5em;
 }
 
 #weatherContainer {

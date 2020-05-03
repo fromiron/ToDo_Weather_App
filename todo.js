@@ -2,12 +2,14 @@
 
 const pendingList = document.querySelector('#todo_pending'),
   finishedList = document.querySelector('#todo_finished'),
-  form = document.querySelector('#todo_input_form'),
+  form = document.querySelector('#todo_input_wrap'),
   input = form.querySelector('#todo_input');
 
 const PENDING = 'PENDING';
+const CHECK = 'CHECK';
 
-let pendingTasks;
+let pendingTasks,
+  checkList = [];
 
 const getTaskObject = (text) => {
   return {
@@ -33,8 +35,7 @@ const addToPending = (task) => {
 const deleteTask = (event) => {
   const button = event.target.parentNode;
   const li = button.parentElement;
-  if(li.id === 'todo_pending')return;
-  console.log(li);
+  if (li.id === 'todo_pending') return;
   li.parentNode.removeChild(li);
   removePending(li.id);
   saveState();
@@ -43,8 +44,18 @@ const deleteTask = (event) => {
 const handleFinishClick = (event) => {
   const button = event.target.parentNode;
   const li = button.parentElement;
-  if(li.id === 'todo_pending')return;
-  li.classList.toggle('todo_finished');
+  if (li.id === 'todo_pending') return;
+  if (li.classList.contains('todo_finished')) {
+    li.classList.remove('todo_finished');
+    if (checkList.includes(li.id)) {
+      const delIndex = checkList.indexOf(li.id);
+      checkList.splice(delIndex, 1);
+    }
+  } else {
+    li.classList.add('todo_finished');
+    checkList.push(li.id);
+  }
+
   saveState();
 };
 
@@ -57,6 +68,9 @@ const buildGenericList = (task) => {
   deleteBtn.addEventListener('click', deleteTask);
   li.append(span, deleteBtn);
   li.id = task.id;
+  if (checkList.includes(li.id)) {
+    li.classList.add('todo_finished');
+  }
   return li;
 };
 
@@ -71,10 +85,12 @@ const paintPending = (task) => {
 
 const saveState = () => {
   localStorage.setItem(PENDING, JSON.stringify(pendingTasks));
+  localStorage.setItem(CHECK, JSON.stringify(checkList));
 };
 
 const loadState = () => {
   pendingTasks = JSON.parse(localStorage.getItem(PENDING)) || [];
+  checkList = JSON.parse(localStorage.getItem(CHECK)) || [];
 };
 
 const restoreState = () => {
