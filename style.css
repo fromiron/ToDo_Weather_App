@@ -133,6 +133,7 @@ body {
 }
 
 #clockContainer {
+  margin-top: 3em;
   position: relative;
   display: flex;
   justify-content: center;
