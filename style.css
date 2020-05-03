@@ -21,10 +21,13 @@ body {
   text-align: center;
   flex-direction: column;
 }
-#weatherContainer #weather__condition{
+#weatherContainer #weather__condition {
   font-size: 3em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
 }
+#weather__condition__kr{
+  margin-bottom: 1em;
+} 
 
 #clockContainer {
   position: relative;
@@ -48,6 +51,7 @@ body {
 #clock__main {
   display: inline-flex;
   font-size: 9.5em;
+  margin-right: 10px;
 }
 #clock__right {
   padding-top: 0.5em;
@@ -58,4 +62,16 @@ body {
 }
 #clock__bottom {
   font-size: 1.5em;
+}
+#clock__dots {
+  display: inline-flex;
+  align-items: center;
+  transform: rotate( 90deg )
+}
+#clock__dots .clock__dots__dots {
+  background-color: black;
+  height: 0.08em;
+  width: 0.08em;
+  border-radius: 50%;
+  margin: 0 7px 0 7px;
 }
