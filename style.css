@@ -19,7 +19,7 @@ body {
   justify-content: center;
   background-position: center;
 }
-#bgCover{
+#bgCover {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -29,14 +29,36 @@ body {
 
 #nameContainer {
   margin-top: 50px;
-  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+#todoContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1em;
+}
+#todo_input {
+  width: 300px;
+}
+.todo_finished {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: line-through;
+}
+
+#todo_pending__wrap {
+  margin-top: 1em;
+}
+#todo_input_form {
+  margin-top: 0.5em;
+}
+#todo_pending {
+  margin-top: 0.5em;
+  padding-left: 2em;
+}
 
 #weatherContainer {
-  position: relative;
   display: flex;
   align-items: center;
   text-align: center;
@@ -46,9 +68,9 @@ body {
   font-size: 3em;
   margin-bottom: 0.1em;
 }
-#weather__condition__kr{
+#weather__condition__kr {
   margin-bottom: 1em;
-} 
+}
 
 #clockContainer {
   position: relative;
@@ -88,7 +110,7 @@ body {
 #clock__dots {
   display: inline-flex;
   align-items: center;
-  transform: rotate( 90deg );
+  transform: rotate(90deg);
 }
 #clock__dots .clock__dots__dots {
   background-color: black;
@@ -98,4 +120,3 @@ body {
   margin: 0 7px 0 7px;
   background-color: white;
 }
-

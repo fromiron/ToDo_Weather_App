@@ -81,7 +81,7 @@ const weatherTranslatorKR = {
   962: '허리케인',
 };
 
-
+function init() {
   navigator.geolocation.getCurrentPosition((position) => {
     try {
       const latitude = position.coords.latitude;
@@ -107,4 +107,6 @@ const weatherTranslatorKR = {
         });
     } catch (e) {}
   });
+}
 
+init();

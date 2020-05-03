@@ -32,9 +32,8 @@ const loadName = () => {
 
 function init() {
   loadName();
+  nameInput.addEventListener('keydown', function (e) {
+    if (e.keyCode === 13 && e.target.value !== '') saveName(e.target.value);
+  });
 }
 init();
-
-nameInput.addEventListener('keydown', function (e) {
-  if (e.keyCode === 13 && e.target.value !== '') saveName(e.target.value);
-});

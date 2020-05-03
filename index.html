@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Today's weather</title>
   </head>
@@ -43,11 +49,22 @@
         <input type="text" name="name__input" id="name__input" />
       </div>
     </div>
-    <div id="bg"><div id="bgCover"></div></div>
 
     <div id="todoContainer">
-      <div id="todo"></div>
+      <div id="todo">
+        <h4>To Do List</h4>
+
+        <form id="todo_input_form">
+          <input type="text" id="todo_input" />
+        </form>
+
+        <div id="todo_pending__wrap">
+          <ol id="todo_pending"></ol>
+        </div>
+      </div>
     </div>
+
+    <div id="bg"><div id="bgCover"></div></div>
 
     <script src="index.js"></script>
     <script src="weather.js"></script>
