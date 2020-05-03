@@ -6,12 +6,31 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-#clockContainer {
+#nameContainer {
+  margin-top: 50px;
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+#weatherContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+#weatherContainer #weather__condition{
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+#clockContainer {
+  position: relative;
+  display: flex;
   justify-content: center;
-  height: 520px;
+  height: 320px;
 }
 #clock {
   display: flex;
