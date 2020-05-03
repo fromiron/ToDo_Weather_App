@@ -4,23 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Today's weather</title>
   </head>
+
   <body>
+
+
     <div id="clockContainer">
       <div id="clock">
-        <div id="clock__left">12:30</div>
-        <div id="clock__right">
-          <div id="clock__right__AP">PM</div>
-          <div id="clock__right__sec">35</div>
+        <div id="clock__time">
+          <div id="clock__main">
+            <div id="clock__hours">00</div>
+            <div id="clock__dots">:</div>
+            <div id="clock__minutes">00</div>
+          </div>
+          <div id="clock__right">
+            <div id="clock__right__AP">PM</div>
+            <div id="clock__right__sec">00</div>
+          </div>
         </div>
+        <div id="clock__bottom"> </div>
       </div>
-      <div id="clock__bottom">2020/5/3/Sunday</div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>
