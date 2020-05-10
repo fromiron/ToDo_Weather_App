@@ -3,6 +3,7 @@
 const jsHours = document.querySelector('#clock__hours');
 const jsMinutes = document.querySelector('#clock__minutes');
 const jsSeconds = document.querySelector('#clock__right__sec');
+const jsAmPm = document.querySelector('#clock__right__AP');
 const jsDay = document.querySelector('#clock__bottom');
 const bgImage = new Array('img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg');
 
@@ -30,8 +31,14 @@ function clock() {
   const hours = date.getHours();
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
+  if (hours >= 12) {
+    jsAmPm.innerHTML = 'PM';
+  } else {
+    jsAmPm.innerHTML = 'AM';
+  }
   jsDay.innerHTML = WEEK[day];
-  jsHours.innerText = `${hours < 10 ? `0${hours}` : hours}`;
+
+  jsHours.innerHTML = `${hours < 10 ? `0${hours}` : hours}`;
   jsMinutes.innerHTML = `${minutes < 10 ? `0${minutes}` : minutes}`;
   jsSeconds.innerHTML = `${seconds < 10 ? `0${seconds}` : seconds}`;
 }
