@@ -28,7 +28,7 @@ const WEEK = [
 function clock() {
   const date = new Date();
   const day = date.getDay();
-  const hours = date.getHours();
+  let hours = date.getHours();
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
   if (hours >= 12) {
@@ -36,8 +36,8 @@ function clock() {
   } else {
     jsAmPm.innerHTML = 'AM';
   }
+  if (hours >= 13) hours = hours - 12;
   jsDay.innerHTML = WEEK[day];
-
   jsHours.innerHTML = `${hours < 10 ? `0${hours}` : hours}`;
   jsMinutes.innerHTML = `${minutes < 10 ? `0${minutes}` : minutes}`;
   jsSeconds.innerHTML = `${seconds < 10 ? `0${seconds}` : seconds}`;
